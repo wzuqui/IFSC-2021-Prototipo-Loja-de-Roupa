@@ -1,0 +1,11 @@
+.content {
+  display: grid;
+  grid-template-columns: 25rem auto;
+  grid-template-rows: 7rem auto 10rem;
+  grid-template-areas:
+    "MH MH"
+    "AS CT"
+    "FT FT";
+  min-height: 100vh;
+  width: 100vw;
+}
