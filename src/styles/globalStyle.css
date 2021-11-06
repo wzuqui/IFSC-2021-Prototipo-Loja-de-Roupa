@@ -5,15 +5,30 @@
   text-decoration: none;
   box-sizing: border-box;
 }
-
+*:focus {
+  outline: none;
+}
 html {
+  --primary: #ebeff2;
+  --secondary: #fafafa;
+  --terciary: #e6e8eb;
+
+  --text: #323135;
+
+  --card: #fff;
+
+  --white: #fafafa;
+  --black: #030303;
+  --gray: #bfbfbf;
+
   font-size: 62.5%;
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  background-color: var(--background);
+  background-color: var(--secondary);
+  overflow-x: hidden;
 }
 
 body,
@@ -21,7 +36,7 @@ button,
 input,
 textarea {
   font-size: clamp(14px, 1.6rem, 2vw);
-  font-family: "Bebas Neue", cursive;
+  font-family: "Lato", sans-serif;
 }
 
 .sr-only {
@@ -36,8 +51,7 @@ textarea {
   border-width: 0;
 }
 
-input {
-  border: 1px solid var(--color);
+button,
+a {
+  cursor: pointer;
 }
-
-
