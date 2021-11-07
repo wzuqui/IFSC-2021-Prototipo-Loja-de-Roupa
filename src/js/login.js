@@ -38,7 +38,7 @@ function SignIn(iEmail, iPass) {
     ? Login[0] // Emite um alert devido a resposta do Login[0] (.map retorna array)
       ? iEmail === "admin@gmail.com"
         ? (window.location.href = "indexadm.html")
-        : (window.location.href = "index.html")
+        : (window.location.href = "indexcliente.html")
       : activeSnackbar("Dados Inválidos")
     : activeSnackbar("Email não Cadastrado");
 }

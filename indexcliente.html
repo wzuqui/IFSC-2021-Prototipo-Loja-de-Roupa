@@ -9,7 +9,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loja Bom Look - ADM</title>
+    <title>Loja Bom Look</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,32 +31,35 @@
     <link rel="stylesheet" href="./src/styles/card.css" />
     <link rel="stylesheet" href="./src/styles/filter.css" />
     <link rel="stylesheet" href="./src/styles/snackbar.css" />
-    <link rel="stylesheet" href="./src/styles/indexadm.css" />
+    <link rel="stylesheet" href="./src/styles/indexcliente.css" />
 
   </head>
   <body class="layout">
     <header>
-      <div class="header_adm">
-        <a href="estoque.html">Estoque</a>
-        <a href="fornecedores.html">Fornecedores</a>
-        <a href="pedidos.html">Pedidos</a>
-        <a href="suporte.html">Suporte</a>
-      </div>
+      <a href="indexcliente.html">
+        <img
+          src="./public/icons/LogoPronta.svg"
+          alt="Bom Look Logo"
+          class="logo"
+      /></a>
       <div>
+        <form class="search">
+          <input type="text" placeholder="O que você procura?" /><button
+            type="submit"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
         <nav>
-          <div class="dropdown3">
-        <a href="adm.html"><img src="./public/icons/adm.svg"></img> </a>
-      
-      <div class="dropdown-content3">
-          <a href="index.html">Sair</a>
+            <div class="dropdown3">
+          <a href="cliente.html"><img src="./public/icons/cliente.svg"></img> </a>
+        
+        <div class="dropdown-content3">
+            <a href="index.html">Sair</a>
+          </div>
         </div>
-      </div>
-  </nav>  <a href="indexadm.html">
-          <img
-            src="./public/icons/LogoPronta.svg"
-            alt="Bom Look Logo"
-            class="logo-adm"
-        /></a>
+    </nav>  
+    <a href="carrinhocliente.html"><i class="fas fa-shopping-cart"></i> </a>
       </div>
     </header>
     <div class="content">
@@ -133,8 +136,10 @@
                 <span>R$ 199,00</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -152,8 +157,10 @@
                 <span>R$ 329,00</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -171,8 +178,10 @@
                 <span>R$ 249,00</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -190,8 +199,10 @@
                 <span>R$ 249,00</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -212,8 +223,10 @@
                 <span>R$ 129,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -231,8 +244,10 @@
                 <span>R$ 229,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -250,8 +265,10 @@
                 <span>R$ 109,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -269,8 +286,10 @@
                 <span>R$ 149,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -291,8 +310,10 @@
                 <span>R$ 119,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -310,8 +331,10 @@
                 <span>R$ 129,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -329,8 +352,10 @@
                 <span>R$ 129,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -348,8 +373,10 @@
                 <span>R$ 89,99</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -370,8 +397,10 @@
                 <span>R$ 199,90</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -389,8 +418,10 @@
                 <span>R$ 79,00</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -408,8 +439,10 @@
                 <span>R$ 149,90</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -427,8 +460,10 @@
                 <span>R$ 119,00</span>
               </div>
               <div>
-                <a href="exemploprodutoadm.html">Visualizar</a>
-                <a href="exprodutoedit.html">Editar</a>
+                <a href="exemploprodutocliente.html">Visualizar</a>
+                <button onclick="activeSnackbar('Adicionado ao carrinho!')">
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -442,7 +477,7 @@
         <i class="fab fa-facebook-square"></i>
       </div>
       <div>
-        <p>Página feita por: Bernardo Augusto Picoli &emsp;&emsp; MOD: V</p>
+        <p>Página feita por: Bernardo Augusto Picoli &emsp; MOD: V</p>
       </div>
       <div></div>
     </footer>
