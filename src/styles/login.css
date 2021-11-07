@@ -29,7 +29,7 @@ body {
 .content::before {
   content: "";
   position: absolute;
-  background-color: #58af9b;
+  background-color: #323135;
   width: 40%;
   height: 100%;
   border-top-left-radius: 15px;
@@ -46,7 +46,7 @@ body {
   margin-bottom: 10px;
 }
 .title-second {
-  color: #58af9b;
+  color: #323135;
 }
 .description {
   font-size: 14px;
@@ -80,17 +80,17 @@ body {
 }
 .btn-primary:hover {
   background-color: #fff;
-  color: #58af9b;
+  color: #323135;
 }
 .btn-second {
-  background-color: #58af9b;
-  border: 1px solid #58af9b;
+  background-color: #323135;
+  border: 1px solid #323135;
   transition: background-color 0.5s;
 }
 .btn-second:hover {
   background-color: #fff;
-  border: 1px solid #58af9b;
-  color: #58af9b;
+  border: 1px solid #323135;
+  color: #323135;
 }
 .first-content {
   display: flex;
@@ -119,9 +119,9 @@ body {
   transition: background-color 0.5s;
 }
 .link-social-media:hover .item-social-media {
-  background-color: #58af9b;
+  background-color: #323135;
   color: #fff;
-  border-color: #58af9b;
+  border-color: #323135;
 }
 .list-social-media {
   display: flex;
