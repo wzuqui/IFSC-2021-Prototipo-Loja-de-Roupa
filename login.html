@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Login - Bom Look</title>
     <link rel="stylesheet" href="./src/styles/layout.css">
     <link rel="stylesheet" href="./src/styles/globalStyle.css">
     <link rel="stylesheet" href="./src/styles/login.css">
     <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/snackbar.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
@@ -49,7 +51,7 @@
                             </li>
                         </a>
                     </ul>
-                </div><!-- social media -->
+                </div>
                 <p class="description description-second">ou use seu email para se registrar:</p>
                 <form class="form" onsubmit="handleSubmit(event, 'signup')">
                     <label class="label-input" for="">
@@ -100,16 +102,16 @@
                     </ul>
                 </div>
                 <p class="description description-second">ou use sua conta de email:</p>
-                <form class="form">
+                <form class="form" onsubmit="handleSubmit(event, 'signin')">
                 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email"required>
+                        <input type="email" placeholder="Email"required id="signin-email">
                     </label>
                 
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha"required>
+                        <input type="password" placeholder="Senha"required id="signin-password"> 
                     </label>
                 
                     <a class="password" href="#">Esqueceu sua senha?</a>
@@ -118,6 +120,8 @@
             </div>
         </div>
     </div>
+    <div id="snackbar"></div>
     <script src="./src/js/login.js"></script>
+    <script src="./src/js/snackbar.js"></script>
 </body>
 </html>

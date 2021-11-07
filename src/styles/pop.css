@@ -1,0 +1,23 @@
+.pop {
+  position: absolute;
+  right: 42rem;
+  padding: 0.7rem;
+  background-color: var(--gray);
+  -webkit-box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.6rem;
+  bottom: -12rem;
+  transition: bottom 0.8s;
+}
+
+.pop.active {
+  bottom: 40rem;
+}
+.pop textarea {
+  border-radius: 0.4rem;
+  background-color: var(--gray);
+  border: 1px solid black;
+  resize: none;
+  height: 10rem;
+  width: 20rem;
+}

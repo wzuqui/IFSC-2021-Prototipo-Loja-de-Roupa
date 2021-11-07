@@ -9,7 +9,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loja Bom Look</title>
+    <title>Editar produto - Bom Look</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./src/styles/globalStyle.css" />
     <link rel="stylesheet" href="./src/styles/layout.css" />
     <link rel="stylesheet" href="./src/styles/header.css" />
-    <link rel="stylesheet" href="./src/styles/exemploproduto.css" />
+    <link rel="stylesheet" href="./src/styles/exprodutoedit.css" />
     <link rel="stylesheet" href="./src/styles/snackbar.css" />
   </head>
   <body class="layout">
@@ -45,42 +45,35 @@
     </header>
     <div class="content">
       <div class="container">
-        <img src="./public/products/SportMasc-Lacoste.jpg" alt="" />
+        <img src="./public/icons/no-image.jpg" alt="" />
       </div>
 
       <div class="aside">
-        <h1>Camiseta Lacoste Técnica Masculina</h1>
-        <h3>R$ 199,00</h3>
-        <span>Até 3 x <b>R$66,33</b> sem juros</span>
-        <h4>Selecionar tamanho</h4>
+        <input
+          class="edit_input"
+          type="text"
+          placeholder="Nome produto.."
+        /><br />
+        <input class="editrs_input" type="text" value="R$ 00,00 " />
+        <h4>Quantidade</h4>
+        <input class="editrs_input" type="number" value="1" placeholder="0" />
+        <h4>Adicionar tamanho</h4>
         <div class="btn_tam">
-          <button>PP</button>
-          <button>P</button>
-          <button>M</button>
-          <button>G</button>
-          <button>GG</button>
+          <button>+</button>
         </div>
-        <a href="exprodutoedit.html"
-          ><button class="btn_carrin">EDITAR PRODUTO</button></a
-        >
         <button
           class="btn_carrin"
-          onclick="activeSnackbar('Produto Removido!')"
+          onclick="activeSnackbar('Alterações salvas!')"
         >
-          REMOVER PRODUTO
+          SALVAR ALTERAÇÕES &emsp; ╰（‵□′）╯
         </button>
         <div class="desc_prod">
           <h3>Descrição</h3>
-          <span>REFERÊNCIA TH7618-21</span>
-          <h4>
-            Esta ousada camiseta Lacoste em jérsei técnico traz uma estampa
-            ultra dry na parte detrás da barra. Absolutamente inovadora.
-          </h4>
-          <li>Em material ultra dry</li>
-          <li>Mistura de jersey de algodão ultra-seco respirável</li>
-          <li>Costura decorativa</li>
-          <li>Crocodilo verde bordado no peito</li>
-          <li>O modelo mede 6'2" e veste tamanho 4</li>
+          <input
+            class="editdesc_input"
+            type="text"
+            placeholder="Descrição..."
+          />
         </div>
       </div>
     </div>

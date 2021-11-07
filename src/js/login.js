@@ -34,19 +34,19 @@ function SignIn(iEmail, iPass) {
     // mapeamos o array que o filter retornou e verificamos agora se a senha cadastrada é a mesma que foi inserida
     (account) => (account.password === iPass ? true : false)
   );
-  alert(
-    Login.length > 0 // se o email existir retorna o Login[0] então se não existir o [0] o email não foi encontrado
-      ? Login[0] // Emite um alert devido a resposta do Login[0] (.map retorna array)
-        ? "Login Realizado Com Sucesso"
-        : "Dados Inválidos"
-      : "Email não Cadastrado"
-  );
+  Login.length > 0 // se o email existir retorna o Login[0] então se não existir o [0] o email não foi encontrado
+    ? Login[0] // Emite um alert devido a resposta do Login[0] (.map retorna array)
+      ? iEmail === "admin@gmail.com"
+        ? (window.location.href = "indexadm.html")
+        : (window.location.href = "index.html")
+      : activeSnackbar("Dados Inválidos")
+    : activeSnackbar("Email não Cadastrado");
 }
 
 function SignUp(iEmail, iPass) {
   const accounts = Accounts.filter((object) => object.email === iEmail);
   if (accounts.length > 0) {
-    alert("Email já Cadastrado");
+    activeSnackbar("Email já Cadastrado");
     return;
   }
 
@@ -75,5 +75,3 @@ function handleSubmit(e, type) {
   if (type == "signup") SignUp(iEmail, iPass);
   if (type == "signin") SignIn(iEmail, iPass);
 }
-
-

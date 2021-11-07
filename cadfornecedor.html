@@ -1,3 +1,4 @@
+</html>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -27,9 +28,43 @@
     <link rel="stylesheet" href="./src/styles/globalStyle.css" />
     <link rel="stylesheet" href="./src/styles/layout.css" />
     <link rel="stylesheet" href="./src/styles/header.css" />
-    <link rel="stylesheet" href="./src/styles/exemploproduto.css" />
     <link rel="stylesheet" href="./src/styles/snackbar.css" />
   </head>
+  <style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: darkgrey;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: lightgray;
+    }
+    
+    div {
+      border-radius: 5px;
+
+      padding: 20px;
+    }
+    .content {
+      margin-top: 7rem;
+    }
+</style>
   <body class="layout">
     <header>
       <a href="index.html">
@@ -39,51 +74,32 @@
           class="logo"
       /></a>
       <div>
+        <form class="search">
+          <input type="text" placeholder="O que você procura?" /><button
+            type="submit"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
         <a href="login.html"><i class="fas fa-user"></i> </a>
         <a href="carrinho.html"><i class="fas fa-shopping-cart"></i> </a>
       </div>
     </header>
     <div class="content">
-      <div class="container">
-        <img src="./public/products/SportMasc-Lacoste.jpg" alt="" />
-      </div>
+      <h3>Fornecedores</h3>
 
-      <div class="aside">
-        <h1>Camiseta Lacoste Técnica Masculina</h1>
-        <h3>R$ 199,00</h3>
-        <span>Até 3 x <b>R$66,33</b> sem juros</span>
-        <h4>Selecionar tamanho</h4>
-        <div class="btn_tam">
-          <button>PP</button>
-          <button>P</button>
-          <button>M</button>
-          <button>G</button>
-          <button>GG</button>
-        </div>
-        <a href="exprodutoedit.html"
-          ><button class="btn_carrin">EDITAR PRODUTO</button></a
-        >
-        <button
-          class="btn_carrin"
-          onclick="activeSnackbar('Produto Removido!')"
-        >
-          REMOVER PRODUTO
-        </button>
-        <div class="desc_prod">
-          <h3>Descrição</h3>
-          <span>REFERÊNCIA TH7618-21</span>
-          <h4>
-            Esta ousada camiseta Lacoste em jérsei técnico traz uma estampa
-            ultra dry na parte detrás da barra. Absolutamente inovadora.
-          </h4>
-          <li>Em material ultra dry</li>
-          <li>Mistura de jersey de algodão ultra-seco respirável</li>
-          <li>Costura decorativa</li>
-          <li>Crocodilo verde bordado no peito</li>
-          <li>O modelo mede 6'2" e veste tamanho 4</li>
-        </div>
+      <div>
+        <form action="Fornecedores.html">
+          <label for="fname">Nome</label>
+          <input type="text" id="fname" name="firstname" />
+
+          <label for="lname">Contato</label>
+          <input type="text" id="lname" name="lastname" />
+
+          <input type="submit" value="Salvar" />
+        </form>
       </div>
-    </div>
+  </div>
     <footer>
       <div>
         <i class="fab fa-whatsapp-square"></i>
@@ -91,7 +107,7 @@
         <i class="fab fa-facebook-square"></i>
       </div>
       <div>
-        <p>Página feita por: Bernardo Augusto Picoli &emsp;&emsp; MOD: V</p>
+        <p>Página feita por: Bernardo Augusto Picoli &emsp; MOD: V</p>
       </div>
       <div></div>
     </footer>
