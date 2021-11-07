@@ -61,12 +61,17 @@
     #dgrey {
       background-color: #3b3b3f;
     }
+
+    #dgrey button {
+      background-color: transparent;
+    }
     .content {
       align-items: center;
       justify-content: center;
       display: flex;
       flex-direction: column;
       padding-top: 7rem;
+      
     }
     table {
       width: 100%;
@@ -111,6 +116,15 @@
     tr:hover {
       background-color: #d6d4d49f;
     }
+
+    .modalwrapper{
+      display: none;
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      left: 0;
+      top: 0;
+    }
   </style>
 
   <body class="layout">
@@ -151,9 +165,9 @@
               <td>03/03/2021</td>
 
               <td id="dgrey">
-                <a href="exprodutoedit.html"
+                <button onclick="openPop()"
                   ><img src="./public/icons/editar.svg" id="edit"
-                /></a>
+                /></button>
               </td>
               <td id="dgrey">
                 <img
@@ -170,9 +184,9 @@
               <td>20/04/2021</td>
 
               <td id="dgrey">
-                <a href="exprodutoedit.html"
+                <button onclick="openPop()"
                   ><img src="./public/icons/editar.svg" id="edit"
-                /></a>
+                /></button>
               </td>
               <td id="dgrey">
                 <img
@@ -189,9 +203,9 @@
               <td>12/05/2021</td>
 
               <td id="dgrey">
-                <a href="exprodutoedit.html"
+                <button onclick="openPop()"
                   ><img src="./public/icons/editar.svg" id="edit"
-                /></a>
+                /></button>
               </td>
               <td id="dgrey">
                 <img
@@ -208,9 +222,9 @@
               <td>16/08/2021</td>
 
               <td id="dgrey">
-                <a href="exprodutoedit.html"
+                <button onclick="openPop()"
                   ><img src="./public/icons/editar.svg" id="edit"
-                /></a>
+                /></button>
               </td>
               <td id="dgrey">
                 <img
@@ -245,6 +259,7 @@
       <div></div>
     </footer>
     <div id="snackbar"></div>
-    <div class="pop active"><textarea></textarea></div>
+    <div class="pop"><textarea></textarea></div>
+    <div class="modalwrapper"></div>
   </body>
 </html>
