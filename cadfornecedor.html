@@ -32,10 +32,10 @@
   </head>
   <style>
     input[type=text], select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
+      width: 60rem;
+      padding: 10px 10px;
+      margin: 10px 0;
+      display: flex;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
@@ -43,62 +43,72 @@
     
     input[type=submit] {
       width: 100%;
-      background-color: darkgrey;
+      background-color: #515153;
       color: white;
       padding: 14px 20px;
       margin: 8px 0;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: transform 0.3s;
     }
     
     input[type=submit]:hover {
-      background-color: lightgray;
+      transform: scale(1.1);
     }
-    
+    input[type=submit]:active {
+      transform: scale(1);
+    }
     div {
       border-radius: 5px;
-
-      padding: 20px;
     }
     .content {
-      margin-top: 7rem;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      padding-top: 7rem;
+    }
+    h3 {
+      color: var(--text);
+      font-size: 3rem;
+      font-weight: 500;
+      padding-bottom: 6rem;
+    
     }
 </style>
   <body class="layout">
     <header>
-      <a href="index.html">
-        <img
-          src="./public/icons/LogoPronta.svg"
-          alt="Bom Look Logo"
-          class="logo"
-      /></a>
+      <div class="header_adm">
+        <a href="estoque.html">Estoque</a>
+        <a href="fornecedores.html">Fornecedores</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="suporte.html">Suporte</a>
+      </div>
       <div>
-        <form class="search">
-          <input type="text" placeholder="O que você procura?" /><button
-            type="submit"
-          >
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
         <a href="login.html"><i class="fas fa-user"></i> </a>
-        <a href="carrinho.html"><i class="fas fa-shopping-cart"></i> </a>
+        <a href="index.html">
+          <img
+            src="./public/icons/LogoPronta.svg"
+            alt="Bom Look Logo"
+            class="logo-adm"
+        /></a>
       </div>
     </header>
     <div class="content">
-      <h3>Fornecedores</h3>
-
-      <div>
+      <h3>Cadastro de Fornecedor</h3>
         <form action="Fornecedores.html">
           <label for="fname">Nome</label>
-          <input type="text" id="fname" name="firstname" />
-
+          <input type="text" id="fname" />
           <label for="lname">Contato</label>
-          <input type="text" id="lname" name="lastname" />
-
-          <input type="submit" value="Salvar" />
+          <input type="text" id="lname" />
+          <label for="lname">Assunto</label>
+          <input type="text" id="lname"/>
+          <label for="lname">Data</label>
+          <input type="text" id="lname" />
+          <input type="submit" value="Salvar"/>
         </form>
-      </div>
+      
   </div>
     <footer>
       <div>
