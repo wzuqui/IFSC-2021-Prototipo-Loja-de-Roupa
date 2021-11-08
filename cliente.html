@@ -27,8 +27,11 @@
     <link rel="stylesheet" href="./src/styles/globalStyle.css" />
     <link rel="stylesheet" href="./src/styles/layout.css" />
     <link rel="stylesheet" href="./src/styles/header.css" />
-    <link rel="stylesheet" href="./src/styles/snackbar.css" />
+    <link rel="stylesheet" href="./src/styles/snackbar.css" /> 
     <link rel="stylesheet" href="./src/styles/indexcliente.css" />
+    <link rel="stylesheet" href="./src/styles/cliente.css"/>
+
+
 
   </head>
   <body class="layout">
@@ -55,135 +58,34 @@
           </div>
         </div>
     </nav>  
-    <a href="carrinho.html"><i class="fas fa-shopping-cart"></i> </a>
+    <a href="carrinhocliente.html"><i class="fas fa-shopping-cart"></i> </a>
       </div>
     </header>
-    <div class="content"><div class="container">
-        <div class="card">
-          <div class="content">
-            <img src="../../public/images/cliente.png" id="photo" />
-            <div class="text">
-              <h1>Usuário</h1>
-              <div id="row2">
-              <p>Cadastro - 25/05/2021 00:00</p>
-              </div>
-              <h2 id="text2">Login: qualquerum@gmail.com<br/>
-                Nome Completo: Yuji Itadori<br/>
-                Endereço: Avenida Aaaa, 111, 11111-11<br/>
-                CPF: 111.111.111-11<br/>
-                Telefone: (99) 99999-9999<br/>
-                <br/>
-                Obrigado por estar sempre conosco. GranBikes.<br/>
-              </h2>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <img src="./public/icons/cliente.svg" id="photo" />
+          <div class="text">
+            <h1>Usuário</h1>
+            <div id="row2">
+            <p>Cadastro - 07/02/2021 10:12</p>
             </div>
+            <h2 id="text2">Login: cliente@gmail.com<br/>
+              Nome Completo: Armando<br/>
+              Endereço: Avenida Aaaa, 111, 11111-11<br/>
+              CPF: 111.111.111-11<br/>
+              Telefone: (99) 99999-9999<br/>
+              <br/>
+              Obrigado por estar sempre conosco. Loja Bom Look.<br/>
+            </h2>
           </div>
-          <div class="info">
-            <button id="log" onclick="Show2()">Editar</button>
-          </div>
         </div>
-        <div class="cardb">
-          <h1>Historico de Compras</h1>
-          <br/>
-          <div id="myDIV">
-            <table>
-              <tr>
-                <th>Poduto</th>
-                <th>cód produto</th>
-                <th>Data</th>
-                <th>Valor</th>
-                <th>Status</th>
-              </tr>
-              <tr>
-                <td>Bicicltea Casual</td>
-                <td>0001</td>
-                <td>28/05/2021 09:58</td>
-                <td>R$ 2.200,00</td>
-                <td>Entregue</td>
-              </tr>
-              <tr>
-                <td>Bicicltea Esportiva</td>
-                <td>0002</td>
-                <td>28/05/2021 09:58</td>
-                <td>R$ 2.200,00</td>
-                <td>Entregue</td>
-              </tr>
-            </table>
-            </div>
+        <div class="info">
+          <button id="log" onclick="Show2()">Editar</button>
         </div>
       </div>
-  
-      <div id="permasnackbar2">
-        <div id="head">
-        <h4>Detalhes do Perfil</h4>
-        <button id="hide" onclick="Hide2()"><img src="../../public/images/close.svg" id="closeicon" /></button>
       </div>
-      <div id="row">
-        <h5>Link Imagem:</h5>
-        <div id="row">
-          <input type="text" placeholder="https://www.aaa.com" id="edit-inputs"/>
-        </div>
-      </div>
-      <hr id="bar"/>
-      <div id="row">
-        <h5>Nome:</h5>
-        <div id="row">
-          <input type="text" placeholder="Usuário" id="edit-inputs"/>
-        </div>
-      </div>
-      <hr id="bar"/>
-      <div id="row">
-        <h5>Login:</h5>
-        <div id="row">
-          <input type="text" placeholder="qualquerum@gmail.com" id="edit-inputs"/>
-        </div>
-      </div>
-      <hr id="bar"/>
-      <div id="row">
-        <h5>Nome Completo:⠀</h5>
-        <div id="row">
-          <input type="text" placeholder="Yuji Itadori" id="edit-inputs"/>
-        </div>
-      </div>
-      <hr id="bar"/>
-      <div id="row">
-        <h5>Endereço:⠀</h5>
-        <div id="row">
-          <input type="text" placeholder="Avenida AA, 11" id="edit-inputs"/>
-        </div>
-      </div>
-      <hr id="bar"/>
-      <div id="row">
-        <h5>Telefone:</h5>
-        <div id="row">
-          <input type="text" placeholder="(99) 99999-9999" id="edit-inputs"/>
-        </div>
-      </div>
-      <hr id="bar"/>
-      <div id="center">
-          <button id="save-btn" onclick="myFunction2()">
-            Salvar
-          </button>
-      </div>
-      </div>
-      <div id="snackbar2">Edições Salvas com Sucesso</div>
-      <footer id="contato">
-        <div id="footer">
-          <div>
-            <img src="../../public/images/adress.svg" id="about" />
-            <p>Avenida Aaaa, 111, 11111-11</p>
-          </div>
-          <div>
-            <a href="https://github.com/ImaKrp"
-              ><img src="../../public/images/github.svg" id="info"
-            /></a>
-          </div>
-          <a href="https://api.whatsapp.com" target="_blank"
-            ><div>
-              <img src="../../public/images/phone.svg" id="about" />
-              <p>(99) 99999-9999</p>
-            </div></a
-          >
-        </div>
+    </div>
     <footer>
       <div>
         <i class="fab fa-whatsapp-square"></i>
@@ -191,7 +93,7 @@
         <i class="fab fa-facebook-square"></i>
       </div>
       <div>
-        <p>Página feita por: Bernardo Augusto Picoli &emsp;&emsp; MOD: V</p>
+        <p>Página feita por: Luiz Gustavo Piuco Bazzotti &emsp; MOD: V</p>
       </div>
       <div></div>
     </footer>
