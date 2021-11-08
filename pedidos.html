@@ -79,14 +79,78 @@
       border: 1px solid #505053;
     }
     h1 {
-      color: var(--text);
-      font-size: 3rem;
-      font-weight: 500;
-      padding-bottom: 4rem;
-    }
+    color: var(--text);
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-right: 2em;
+    margin-bottom: 0.5rem;
+}
     tr:hover {
       background-color: #d6d4d49f;
     }
+    #excluir {
+      width: 3rem;
+      transition: transform 0.3s;
+    }
+    #excluir:hover {
+      transform: scale(1.1);
+    }
+    #excluir:active {
+      transform: scale(1);
+    }
+    .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+input {
+    width: 10em;
+    padding: 0.3em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0.3em 0 0 0.3em;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", serif;
+    font-size: 13px;
+    border: 1px solid #f1f1f1;
+    font-weight: 600;
+    border: 1px solid var(--text);
+}
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+select {
+    margin-left: 2em;
+    width: 12em;
+    padding: 0.32em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", sansserif;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--text);
+}
+select:hover {
+  outline: none;
+  border: 1px solid var(--text);
+}
+
+select:focus {
+  outline: none;
+}
+#search-ico {
+  width: 1.5rem;
+}
+#search-button {
+    border: 1px solid var(--text);
+    background-color: rgb(230, 227, 227);
+    border-radius: 0 0.3em 0.3em 0;
+    padding: 0.12em;
+    margin: 0em;
+}
   </style>
 
   <body class="layout">
@@ -115,7 +179,18 @@
       </div>
     </header>
     <div class="content">
-      <h1>Registro de pedidos</h1>
+      <div class="search">
+        <h1>Lista de Pedido</h1>
+        <input type="text" placeholder="Busca" />
+        <button id="search-button">
+          <img src="./public/icons/search.svg" id="search-ico" />
+        </button>
+        <select>
+          <option>Mais Recentes</option>
+          <option>Mais Caros</option>
+          <option>Mais Baratos</option>
+        </select>
+      </div>
       <div class="card">
         <div id="myDIV">
           <table>
@@ -124,30 +199,59 @@
               <th>Pedido</th>
               <th>Data</th>
               <th>Valor</th>
+              <th>Excluir</th>
             </tr>
             <tr>
               <td>Carlos</td>
               <td>Camiseta Nike SB Masculina</td>
               <td>14/02/2021</td>
               <td>R$ 109,99</td>
+              <td id="dgrey">
+                <img
+                  src="./public/icons/excluir.svg"
+                  id="excluir"
+                  onclick="activeSnackbar('Pedido excluido!')"
+                />
+              </td>
             </tr>
             <tr>
               <td>Amanda</td>
               <td>Camiseta Essentials Slim Feminina</td>
               <td>16/04/2021</td>
               <td>R$ 129,99</td>
+              <td id="dgrey">
+                <img
+                  src="./public/icons/excluir.svg"
+                  id="excluir"
+                  onclick="activeSnackbar('Pedido excluido!')"
+                />
+              </td>
             </tr>
             <tr>
               <td>Pedro</td>
               <td>Camiseta Glith Printed Masculina</td>
               <td>17/04/2021</td>
               <td>R$ 149,90</td>
+              <td id="dgrey">
+                <img
+                  src="./public/icons/excluir.svg"
+                  id="excluir"
+                  onclick="activeSnackbar('Pedido excluido!')"
+                />
+              </td>
             </tr>
             <tr>
               <td>Maria</td>
               <td>Camiseta Lacoste SPORT Tennis Feminina</td>
               <td>20/05/2021</td>
               <td>R$ 329,00</td>
+              <td id="dgrey">
+                <img
+                  src="./public/icons/excluir.svg"
+                  id="excluir"
+                  onclick="activeSnackbar('Pedido excluido!')"
+                />
+              </td>
             </tr>
           </table>
         </div>

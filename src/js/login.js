@@ -12,7 +12,6 @@ btnSignup.addEventListener("click", function () {
 });
 
 const Accounts = JSON.parse(window.localStorage.getItem("@BomLook:users")) ?? [
-  // criamos as contas nesse array de objetos
   {
     id: 1,
     email: "cliente@gmail.com",
@@ -26,16 +25,11 @@ const Accounts = JSON.parse(window.localStorage.getItem("@BomLook:users")) ?? [
 ];
 
 function SignIn(iEmail, iPass) {
-  // const Login vai receber o retorno a baixo
-  const Login = Accounts.filter(
-    // primeiro filtramos as contas cadastradas pra ver se o email providenciado esta cadastrado
-    (account) => account.email === iEmail
-  ).map(
-    // mapeamos o array que o filter retornou e verificamos agora se a senha cadastrada é a mesma que foi inserida
+  const Login = Accounts.filter((account) => account.email === iEmail).map(
     (account) => (account.password === iPass ? true : false)
   );
-  Login.length > 0 // se o email existir retorna o Login[0] então se não existir o [0] o email não foi encontrado
-    ? Login[0] // Emite um alert devido a resposta do Login[0] (.map retorna array)
+  Login.length > 0
+    ? Login[0]
       ? iEmail === "admin@gmail.com"
         ? (window.location.href = "indexadm.html")
         : (window.location.href = "indexcliente.html")
@@ -64,13 +58,13 @@ function SignUp(iEmail, iPass) {
 }
 
 function handleSubmit(e, type) {
-  e.preventDefault(); // impede o formulario de recarregar a pagina
+  e.preventDefault();
   const iEmail = document.getElementById(
     type === "signup" ? "signup-email" : "signin-email"
-  ).value; // pega o email inserido
+  ).value;
   const iPass = document.getElementById(
     type === "signup" ? "signup-password" : "signin-password"
-  ).value; // pega a senha inserida
+  ).value;
 
   if (type == "signup") SignUp(iEmail, iPass);
   if (type == "signin") SignIn(iEmail, iPass);

@@ -8,7 +8,7 @@
   outline: 0;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .container {
   display: flex;
@@ -164,8 +164,6 @@ input:-webkit-autofill {
   border: none;
 }
 
-/* second content*/
-
 .second-content {
   position: absolute;
   display: flex;
@@ -205,14 +203,14 @@ input:-webkit-autofill {
   border-bottom-left-radius: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  animation: slidein 0.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+  animation: slidein 0.3s;
   animation-delay: 0ms;
 
   z-index: 12;
 }
 
 .sign-up-js .content::before {
-  animation: slideout 0.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+  animation: slideout 0.3s;
   animation-delay: 0ms;
 
   z-index: 12;
@@ -231,22 +229,19 @@ input:-webkit-autofill {
   z-index: 13;
 }
 
-/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
 .sign-in-js .first-content .second-column {
   z-index: -1;
   position: relative;
-  animation: deslocamentoEsq 0.2s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+  animation: deslocamentoEsq 0.2s;
   animation-delay: 0ms;
 }
 
 .sign-up-js .second-content .second-column {
   position: relative;
   z-index: -1;
-  animation: deslocamentoDir 0.2s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+  animation: deslocamentoDir 0.2s;
   animation-delay: 0ms;
 }
-
-/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
 
 @keyframes deslocamentoEsq {
   from {
@@ -258,13 +253,11 @@ input:-webkit-autofill {
   25% {
     left: -80px;
     opacity: 0.5;
-    /* z-index: 12; NÃO HÁ NECESSIDADE */
   }
 
   50% {
     left: -100px;
     opacity: 0.2;
-    /* z-index: 12; NÃO HÁ NECESSIDADE */
   }
 
   to {
@@ -282,13 +275,10 @@ input:-webkit-autofill {
 
   25% {
     left: 80px;
-    /* z-index: 12;  NÃO HÁ NECESSIDADE*/
   }
 
   50% {
     left: 100px;
-    /* z-index: 12; NÃO HÁ NECESSIDADE*/
-    /* background-color: yellow;  Exemplo que dei no vídeo*/
   }
 
   to {
@@ -296,8 +286,6 @@ input:-webkit-autofill {
     z-index: -1;
   }
 }
-
-/*ANIMAÇÃO CSS*/
 
 @keyframes slidein {
   from {
@@ -353,7 +341,6 @@ input:-webkit-autofill {
   }
 }
 
-/*VERSÃO MOBILE*/
 @media screen and (max-width: 1000px) {
   .content {
     width: 100%;
@@ -387,8 +374,6 @@ input:-webkit-autofill {
     width: 90%;
   }
 
-  /* ANIMAÇÃO MOBILE CSS*/
-
   @keyframes deslocamentoEsq {
     from {
       top: 0;
@@ -399,13 +384,11 @@ input:-webkit-autofill {
     25% {
       top: -80px;
       opacity: 0.5;
-      /* z-index: 12; NÃO HÁ NECESSIDADE */
     }
 
     50% {
       top: -100px;
       opacity: 0.2;
-      /* z-index: 12; NÃO HÁ NECESSIDADE */
     }
 
     to {
@@ -423,13 +406,10 @@ input:-webkit-autofill {
 
     25% {
       top: 80px;
-      /* z-index: 12;  NÃO HÁ NECESSIDADE*/
     }
 
     50% {
       top: 100px;
-      /* z-index: 12; NÃO HÁ NECESSIDADE*/
-      /* background-color: yellow;  Exemplo que dei no vídeo*/
     }
 
     to {

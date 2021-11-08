@@ -99,15 +99,82 @@
       border: 1px solid #505053;
     }
     h1 {
-      color: var(--text);
-      font-size: 3rem;
-      font-weight: 500;
-      padding-bottom: 6rem;
-      margin-top: -5rem;
-    }
+    color: var(--text);
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-right: 2em;
+    margin-bottom: 1rem;
+}
     tr:hover {
       background-color: #d6d4d49f;
     }
+   .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+input {
+    width: 3em;
+    padding: 0.3em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0.3em 0 0 0.3em;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", sansserif;
+    font-size: 13px;
+    border: 1px solid #f1f1f1;
+    font-weight: 500;
+    border: 1px solid var(--text);
+    text-align: center;
+}
+#periodo {
+    margin-left: 0;
+    width: 7.5em;
+    padding: 0.28em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", sansserif;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--text);
+}
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+select {
+    margin-left: 2em;
+    width: 12em;
+    padding: 0.32em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", sansserif;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--text);
+}
+select:hover {
+  outline: none;
+  border: 1px solid var(--text);
+}
+
+select:focus {
+  outline: none;
+}
+#search-ico {
+  width: 1.5rem;
+}
+#search-button {
+    border: 1px solid var(--text);
+    background-color: rgb(230, 227, 227);
+    border-radius: 0 0.3em 0.3em 0;
+    padding: 0.12em;
+    margin: 0em;
+}
   </style>
 
   <body class="layout">
@@ -136,7 +203,22 @@
       </div>
     </header>
     <div class="content">
+      <div class="search">
       <h1>Fornecedores Cadastrados</h1>
+      <input type="number" placeholder="Busca" value="1"/>
+        <select id="periodo">
+          <option>Semana(s)</option>
+          <option>Mês(es)</option>
+          <option>Ano(s)</option>
+        </select>
+        <button id="search-button" onclick="myFunction()">
+          <img src="./public/icons/search.svg" id="search-ico" />
+        </button>
+        <select>
+          <option>Mais Recentes</option>
+          <option>Mais Antigos</option>
+        </select>
+        </div>
       <div class="card">
         <div id="myDIV">
           <table>
