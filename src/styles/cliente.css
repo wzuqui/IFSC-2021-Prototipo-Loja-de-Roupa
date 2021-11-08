@@ -25,6 +25,14 @@
   text-align: center;
   align-items: center;
 }
+.info {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+}
 h1 {
   color: var(--text);
   font-size: 29px;
@@ -47,7 +55,28 @@ h2 {
 }
 #log {
   margin-top: 0.5em;
-  font-family: "Lato", serif;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--text);
+  color: #fafafa;
+  padding: 1rem 2rem;
+  border-radius: 0.3em;
+  transition: transform 0.2s ease 0s;
+  cursor: pointer;
+  margin-left: 10rem;
+}
+#log:hover {
+  transform: scale(1.1);
+}
+
+#log:active {
+  transform: scale(1);
+}
+#hist {
+  margin-top: 0.5em;
+  margin-left: 1.5rem;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400;
   background-color: var(--text);
@@ -57,14 +86,44 @@ h2 {
   transition: transform 0.2s ease 0s;
   cursor: pointer;
 }
-#log:hover {
+#hist:hover {
   transform: scale(1.1);
 }
 
-#log:active {
+#hist:active {
   transform: scale(1);
 }
+
 .text {
   text-align: left;
   width: 30em;
+}
+input {
+  width: 10rem;
+  padding: 0.2em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.3em 0.3em;
+  box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+  transition: transform 0.2s;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #b9b4c5;
+}
+#edit {
+  margin: 1em;
+}
+.btn_tam button {
+  height: 3rem;
+  width: 3rem;
+  background-color: transparent;
+  border: 1px solid #b9b4c5;
+  border-radius: 0.2rem;
+  transition: transform 0.3s;
+}
+.btn_tam button:hover {
+  transform: scale(1.1);
+}
+.btn_tam button:active {
+  transform: scale(0.95);
 }
