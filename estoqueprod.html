@@ -200,18 +200,16 @@ select:focus {
     </header>
     <div class="content">
       <div class="search">
-        <h1>Controle de Estoque</h1>
+        <h1>Controle da marca Lacoste</h1>
         <input type="text" placeholder="Busca"/>
         <button id="search-button" onclick="myFunction()">
           <img src="./public/icons/search.svg" id="search-ico" />
         </button>
-        <select onchange="window.location.href = 'estoqueprod.html'">
-          <option>Controle por marcas</option>
-          <option>Lacoste</option>
-          <option>Nike</option>
-          <option>Adidas</option>
-          <option>Puma</option>
-        </select>
+        <select>
+            <option>Mais Recentes</option>
+            <option>Mais Caros</option>
+            <option>Mais Baratos</option>
+          </select>
       </div>
       <div class="card">
         <div id="myDIV">
@@ -252,8 +250,8 @@ select:focus {
             </tr>
             <tr>
               <td>002</td>
-              <td>Camiseta Nike Infinite Feminina</td>
-              <td>23</td>
+              <td>Camiseta Lacoste SPORT Tennis Feminina</td>
+              <td>16</td>
               <td>R$ 229,99</td>
 
               <td id="dgrey">
@@ -276,7 +274,7 @@ select:focus {
             </tr>
             <tr>
               <td>003</td>
-              <td>Camiseta Adidas Esportiva Aeroready</td>
+              <td>Camiseta em Jérsei de Algodão Masculina</td>
               <td>32</td>
               <td>R$ 119,99</td>
 
@@ -300,8 +298,8 @@ select:focus {
             </tr>
             <tr>
               <td>004</td>
-              <td>Camiseta Essentials Logo Feminina</td>
-              <td>15</td>
+              <td>Camiseta em Algodão com Decote Feminina</td>
+              <td>25</td>
               <td>R$ 79,00</td>
 
               <td id="dgrey">
@@ -322,95 +320,7 @@ select:focus {
                 />
               </td>
             </tr>
-            <tr>
-              <td>005</td>
-              <td>Camiseta Adicolor Classics</td>
-              <td>30</td>
-              <td>R$ 129,99</td>
-
-              <td id="dgrey">
-                <a href="exprodutoedit.html"
-                  ><img src="./public/icons/editar.svg" id="edit"
-                /></a>
-              </td>
-              <td id="dgrey">
-                <a href="exprodutoedit.html"
-                  ><img src="./public/icons/add.svg" id="add"
-                /></a>
-              </td>
-              <td id="dgrey">
-                <img
-                  src="./public/icons/excluir.svg"
-                  id="excluir"
-                  onclick="activeSnackbar('Produto excluido!')"
-                />
-                <tr>
-                  <td>006</td>
-                  <td>Camiseta Lacoste SPORT Tennis Feminina</td>
-                  <td>34</td>
-                  <td>R$ 329,00</td>
-
-                  <td id="dgrey">
-                    <a href="exprodutoedit.html"
-                      ><img src="./public/icons/editar.svg" id="edit"
-                    /></a>
-                  </td>
-                  <td id="dgrey">
-                    <a href="exprodutoedit.html"
-                      ><img src="./public/icons/add.svg" id="add"
-                    /></a>
-                  </td>
-                  <td id="dgrey">
-                    <img
-                      src="./public/icons/excluir.svg"
-                      id="excluir"
-                      onclick="activeSnackbar('Produto excluido!')"
-                    />
-                    <tr>
-                      <td>007</td>
-                      <td>Camiseta Loungewear Essentials Feminina</td>
-                      <td>22</td>
-                      <td>R$ 89,99</td>
-
-                      <td id="dgrey">
-                        <a href="exprodutoedit.html"
-                          ><img src="./public/icons/editar.svg" id="edit"
-                        /></a>
-                      </td>
-                      <td id="dgrey">
-                        <a href="exprodutoedit.html"
-                          ><img src="./public/icons/add.svg" id="add"
-                        /></a>
-                      </td>
-                      <td id="dgrey">
-                        <img
-                          src="./public/icons/excluir.svg"
-                          id="excluir"
-                          onclick="activeSnackbar('Produto excluido!')"
-                        />
-                        <tr>
-                          <td>008</td>
-                          <td>Camiseta Essentials Logo Feminina</td>
-                          <td>12</td>
-                          <td>R$ 79,00</td>
-
-                          <td id="dgrey">
-                            <a href="exprodutoedit.html"
-                              ><img src="./public/icons/editar.svg" id="edit"
-                            /></a>
-                          </td>
-                          <td id="dgrey">
-                            <a href="exprodutoedit.html"
-                              ><img src="./public/icons/add.svg" id="add"
-                            /></a>
-                          </td>
-                          <td id="dgrey">
-                            <img
-                              src="./public/icons/excluir.svg"
-                              id="excluir"
-                              onclick="activeSnackbar('Produto excluido!')"
-                            />
-                          </td>
+            
                         </tr>
                       </td>
                     </tr>

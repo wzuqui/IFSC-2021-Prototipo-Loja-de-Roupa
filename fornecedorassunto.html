@@ -9,16 +9,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estoque - Bom Look</title>
+    <title>Fornecedores - Bom Look</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="./src/js/slider.js" defer></script>
     <script src="./src/js/snackbar.js" defer></script>
-    <script src="./src/js/pop.js" defer></script>
-
 
     <script
       src="https://kit.fontawesome.com/b5ad8d5d3f.js"
@@ -29,9 +28,7 @@
     <link rel="stylesheet" href="./src/styles/layout.css" />
     <link rel="stylesheet" href="./src/styles/header.css" />
     <link rel="stylesheet" href="./src/styles/snackbar.css" />
-    <link rel="stylesheet" href="./src/styles/pop.css" />
     <link rel="stylesheet" href="./src/styles/indexadm.css" />
-
   </head>
   <style>
     #edit {
@@ -49,10 +46,10 @@
       transition: transform 0.3s;
     }
     #excluir:hover {
-      transform: scale(1.4);
+      transform: scale(1.1);
     }
     #excluir:active {
-      transform: scale(1.1);
+      transform: scale(1);
     }
     #dgrey:hover {
       cursor: pointer;
@@ -62,17 +59,11 @@
     #dgrey {
       background-color: #3b3b3f;
     }
-
-    #dgrey button {
-      background-color: transparent;
-    }
     .content {
       align-items: center;
       justify-content: center;
       display: flex;
       flex-direction: column;
-      padding-top: 7rem;
-      
     }
     table {
       width: 100%;
@@ -108,45 +99,50 @@
       border: 1px solid #505053;
     }
     h1 {
-      color: var(--text);
-      font-size: 3rem;
-      font-weight: 500;
-      margin-right: 2em;
-      margin-bottom: 0.5rem;
-    }
+    color: var(--text);
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-right: 2em;
+    margin-bottom: 1rem;
+}
     tr:hover {
       background-color: #d6d4d49f;
     }
-
-    .modalwrapper{
-      display: none;
-      position: absolute;
-      height: 100vh;
-      width: 100vw;
-      left: 0;
-      top: 0;
-    }
-    select:not(:-internal-list-box) {
-    overflow: visible !important;
-}
-.search {
+   .search {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5em;
 }
 input {
-    width: 10em;
+    width: 3em;
     padding: 0.3em;
     background-color: rgb(230, 227, 227);
     border-radius: 0.3em 0 0 0.3em;
     box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
     transition: transform 0.2s;
-    font-family: "Lato", serif;
+    font-family: "Lato", sansserif;
     font-size: 13px;
     border: 1px solid #f1f1f1;
-    font-weight: 600;
+    font-weight: 500;
     border: 1px solid var(--text);
+    text-align: center;
+}
+#periodo {
+    margin-left: 0;
+    width: 7.5em;
+    padding: 0.28em;
+    background-color: rgb(230, 227, 227);
+    border-radius: 0;
+    box-shadow: 0 0 0.5em 0 rgb(0 0 0 / 10%);
+    transition: transform 0.2s;
+    font-family: "Lato", sansserif;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--text);
+}
+select:not(:-internal-list-box) {
+    overflow: visible !important;
 }
 select {
     margin-left: 2em;
@@ -178,7 +174,7 @@ select:focus {
     border-radius: 0 0.3em 0.3em 0;
     padding: 0.12em;
     margin: 0em;
-}  
+}
   </style>
 
   <body class="layout">
@@ -208,112 +204,92 @@ select:focus {
     </header>
     <div class="content">
       <div class="search">
-        <h1>Página de suporte</h1>
-        <input type="text" placeholder="Busca" />
-        <button id="search-button">
+      <h1>Fornecedore AWX118</h1>
+      <input type="number" placeholder="Busca" value="1"/>
+        <select id="periodo">
+          <option>Semana(s)</option>
+          <option>Mês(es)</option>
+          <option>Ano(s)</option>
+        </select>
+        <button id="search-button" onclick="myFunction()">
           <img src="./public/icons/search.svg" id="search-ico" />
         </button>
         <select>
           <option>Mais Recentes</option>
-          <option>Mais Caros</option>
-          <option>Mais Baratos</option>
+          <option>Mais Antigos</option>
         </select>
-      </div>
+        </div>
       <div class="card">
         <div id="myDIV">
           <table>
             <tr>
-              <th>Nome</th>
-              <th>Email</th>
-              <th>Descrição</th>
-              <th>Data</th>
-              <th>Responder</th>
+              <th>Tipo</th>
+              <th>Cor</th>
+              <th>Tamanho</th>
+              <th>Valor</th>
+              <th>Adicionar</th>
               <th>Excluir</th>
             </tr>
             <tr>
-              <td>Julinho Puhl</td>
-              <td>julioP@yahoo.com</td>
-              <td>Tamanho veio errado!</td>
-              <td>03/03/2021</td>
+              <td>Camisetas</td>
+              <td>Branca e Pretas</td>
+              <td>PP - GG</td>
+              <td>R$ 50,00 - 70,00</td>
 
               <td id="dgrey">
-                <button onclick="openPop()"
+                <a
                   ><img src="./public/icons/editar.svg" id="edit"
-                /></button>
+                /></a>
               </td>
               <td id="dgrey">
                 <img
                   src="./public/icons/excluir.svg"
                   id="excluir"
-                  onclick="activeSnackbar('Excluido!')"
+                  onclick="activeSnackbar('Fornecedor excluido!')"
                 />
               </td>
             </tr>
             <tr>
-              <td>Amanda Freitas</td>
-              <td>amandafreitas@hotmail.com</td>
-              <td>Gostaria de uma peça específica.</td>
-              <td>20/04/2021</td>
+              <td>Calças</td>
+              <td>Jeans e Pretas</td>
+              
+                <td>PP - GG</td>
+              <td>R$ 50,00 - 70,00</td>
 
               <td id="dgrey">
-                <button onclick="openPop()"
+                <a 
                   ><img src="./public/icons/editar.svg" id="edit"
-                /></button>
+                /></a>
               </td>
               <td id="dgrey">
                 <img
                   src="./public/icons/excluir.svg"
                   id="excluir"
-                 onclick="activeSnackbar('Excluido!')"
+                  onclick="activeSnackbar('Fornecedor excluido!')"
                 />
               </td>
             </tr>
             <tr>
-              <td>Paulo Teja</td>
-              <td>pauloTj@gmail.com</td>
-              <td>Como entro em contato com vocês?</td>
-              <td>12/05/2021</td>
+              <td>Intimas</td>
+              <td>Branca e Pretas</td>
+              <td>PP - GG</td>
+              <td>R$ 50,00 - 70,00</td>
 
               <td id="dgrey">
-                <button onclick="openPop()"
+                <a 
                   ><img src="./public/icons/editar.svg" id="edit"
-                /></button>
+                /></a>
               </td>
               <td id="dgrey">
                 <img
                   src="./public/icons/excluir.svg"
                   id="excluir"
-                 onclick="activeSnackbar('Excluido!')"
+                  onclick="activeSnackbar('Fornecedor excluido!')"
                 />
               </td>
             </tr>
-            <tr>
-              <td>João Guilherme</td>
-              <td>joãoguime@gmail.com</td>
-              <td>Não consigo efetuar a compra com o cartão dos meus pais</td>
-              <td>16/08/2021</td>
-
-              <td id="dgrey">
-                <button onclick="openPop()"
-                  ><img src="./public/icons/editar.svg" id="edit"
-                /></button>
-              </td>
-              <td id="dgrey">
-                <img
-                  src="./public/icons/excluir.svg"
-                  id="excluir"
-                 onclick="activeSnackbar('Excluido!')"
-                />
-              </td>
-            </tr>
-        
-                
-                        </tr>
-                      </td>
-                    </tr>
-                  </td>
-                </tr>
-              </td>
+            
+            
             </tr>
           </table>
         </div>
@@ -326,14 +302,10 @@ select:focus {
         <i class="fab fa-facebook-square"></i>
       </div>
       <div>
-        <p>Página feita por: Luiz Gustavo Piuco Bazzotti &emsp; MOD: V</p>
+        <p>Página feita por: João Vitor de Carvalho &emsp;&emsp; MOD: V</p>
       </div>
       <div></div>
     </footer>
     <div id="snackbar"></div>
-    <div class="pop"><h4>Escreva sua resposta:</h4><textarea placeholder="Resposta..">
-        
-    </textarea><img src="./public/icons/send.svg" id="send" alt="Eniar" onclick="activeSnackbar('Resposta enviada'); closePop()"></div>
-    <div class="modalwrapper"></div>
   </body>
 </html>

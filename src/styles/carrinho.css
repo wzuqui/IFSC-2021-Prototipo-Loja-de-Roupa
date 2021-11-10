@@ -48,7 +48,7 @@
   margin-bottom: 1rem;
 }
 input {
-  width: 12em;
+  width: 10em;
   padding: 0.3em;
   background-color: var(--color-background);
   border-radius: 0.3em;
@@ -78,6 +78,7 @@ h1 {
   color: var(--text);
   font-size: 16px;
   font-weight: 400;
+  margin-bottom: 6px;
 }
 h2 {
   color: var(--text);
@@ -126,4 +127,7 @@ h3 {
   margin: 0;
   margin-bottom: 2rem;
   font-size: 3rem;
+}
+.car_text #log {
+  margin-top: 2rem;
 }
